@@ -1,0 +1,34 @@
+.btn {
+	@apply text-white flex w-auto items-center justify-around rounded-md py-1.5 text-center text-sm font-bold transition-all duration-300 hover:brightness-110;
+}
+.btn:not(.isLoading) {
+	@apply disabled:grayscale-[80%] disabled:hover:opacity-100 disabled:hover:brightness-100;
+}
+.btn.primary {
+	@apply bg-primary px-5;
+}
+.btn.primary-outlined {
+	@apply border-primary border-[3px] bg-[#1B304F] px-5;
+}
+/* .btn.secondary {
+	@apply bg-secondary border-[3px] px-5;
+}
+.btn.secondary-outlined {
+	@apply border-secondary border-[3px] bg-[#1E2939] px-5;
+}
+.btn.warning {
+	@apply border-warning border-[3px] bg-[#4B250A] px-5;
+}
+.btn.danger {
+	@apply bg-danger px-5;
+}
+.btn.danger-outlined {
+	@apply border-danger border-[3px] bg-[#230101] px-5;
+} */
+
+.btn.isLoading {
+	@apply before:border-y-white before:border-x-transparent relative text-opacity-0 before:absolute before:aspect-square before:h-4/6 before:animate-spin before:rounded-full before:border-2;
+}
+div.loader {
+	@apply border-y-white border-x-transparent aspect-square animate-spin rounded-full border-2;
+}
